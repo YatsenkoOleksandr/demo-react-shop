@@ -118,13 +118,22 @@ describe('ProductsList', () => {
         isInCart: false,        
       };
 
-      const productItems = [productToAddToCart];
+      const anotherProductItem = {
+        id: 20,
+        name: 'Touring',
+        price: 50,
+        previewImageLink: '',        
+        isInCart: false,        
+      };
+
+      const productItems = [productToAddToCart, anotherProductItem];
       const orderedProductItems = [];
 
       const expectedProductItems = [{
         ...productToAddToCart,
         isInCart: true,
-      }];
+      },
+      anotherProductItem];
 
       const expectedOrderedProductItems = [{
         ...productToAddToCart,
