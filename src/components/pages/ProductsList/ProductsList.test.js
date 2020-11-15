@@ -80,7 +80,7 @@ describe('ProductsList', () => {
   });
 
   describe('addToCart', () => {
-    test('should not change state when product to add not found in the available product items', () => {
+    test('should not change state when product to add not found in the productItems', () => {
       api.getProductItems = jest.fn(() => []);
 
       const productItems = [{
@@ -107,7 +107,7 @@ describe('ProductsList', () => {
       expect(wrapper.state().orderedProductItems).toEqual(orderedProductItems);
     });
 
-    test('should add product to orderedProductItems and set isInCart when product to add exist', () => {
+    test('should add product to orderedProductItems and set isInCart when product to add found in productItems', () => {
       api.getProductItems = jest.fn(() => []);
 
       const productToAddToCart = {

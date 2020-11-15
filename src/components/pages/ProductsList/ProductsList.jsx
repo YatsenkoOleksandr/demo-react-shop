@@ -112,9 +112,9 @@ export class ProductsList extends React.Component {
   }
 
   componentDidMount = () => {
-    const downloadedProductItems = getProductItems();
+    const apiProductItems = getProductItems();
 
-    const productItems = downloadedProductItems.map(product => {
+    const productItems = apiProductItems.map(product => {
       return { ...product, isInCart: false, }
     });
 

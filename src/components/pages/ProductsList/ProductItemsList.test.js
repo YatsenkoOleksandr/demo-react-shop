@@ -4,7 +4,7 @@ import { ProductItemsList } from './ProductItemsList';
 describe('ProductItemsList', () => {
   
   describe('shouldShowProductItem', () => {
-    test('should return true when search product name is empty and hide added items is false', () => {
+    test('should return true when productName is empty and hideAddedItems is false', () => {
       var productItem = {
         name: 'product',
         isInCart: false,
@@ -17,7 +17,7 @@ describe('ProductItemsList', () => {
       expect(result).toBe(true);
     });
 
-    test('should return false when product name does not contain search product name', () => {
+    test('should return false when product name does not contain productName', () => {
       var productName = 'product';
 
       var searchProductName = 'test';
@@ -35,7 +35,7 @@ describe('ProductItemsList', () => {
       expect(result).toBe(false);
     });
 
-    test('should return false when product is in cart and hide added items to cart is true', () => {
+    test('should return false when product is in cart and hideAddedItems is true', () => {
       var isInCart = true;
 
       var searchProductName = '';
@@ -53,7 +53,7 @@ describe('ProductItemsList', () => {
       expect(result).toBe(false);
     });
 
-    test('should return true when product name contains search product name and product is not in cart and hide added items to cart is true', () => {
+    test('should return true when product name contains productName and product is not in cart and hideAddedItems is true', () => {
       var isInCart = false;
       var productName = 'product'
 

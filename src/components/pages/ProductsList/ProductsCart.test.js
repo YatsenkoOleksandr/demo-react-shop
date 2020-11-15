@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { OrderedItemsList } from './OrderedItemsList';
 
 describe('ProductsCart', () => {
-  test('should render cart button by default', () => {
+  test('should render cart button', () => {
     const orderedProductItems = [];
     const decreaseCount = jest.fn();
     const increaseCount = jest.fn();
@@ -24,7 +24,7 @@ describe('ProductsCart', () => {
     expect(wrapper.find(OrderedItemsList)).toHaveLength(0);
   });
 
-  test('should render ordered items list and hide cart button on cart button click', () => {
+  test('should render OrderedItemsList and hide cart button on cart button click', () => {
     const orderedProductItems = [];
     const decreaseCount = jest.fn();
     const increaseCount = jest.fn();
@@ -44,7 +44,7 @@ describe('ProductsCart', () => {
     expect(wrapper.find(OrderedItemsList)).toHaveLength(1);
   });
 
-  test('should render ordered items with correct total price and props', () => {
+  test('should render OrderedItemsList with correct total price and props when showOrderedItems is true', () => {
     const orderedProductItems = [
       {
         id: 100,

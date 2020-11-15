@@ -80,7 +80,7 @@ describe('ProductItem', () => {
     expect(addToCart).toHaveBeenCalledWith(productItem);
   });
 
-  test('should render Remove from Cart button when product is in cart', () => {
+  test('should render Remove From Cart button when product is in cart', () => {
     const isInCart = true;
 
     const productItem = {
@@ -104,7 +104,7 @@ describe('ProductItem', () => {
     expect(removeFromCartButton).toHaveTextContent('Remove from Cart');
   });
 
-  test('should call removeFromCart props when clicked on Remove from Cart button', () => {
+  test('should call removeFromCart props when clicked on Remove From Cart button', () => {
     const isInCart = true;
 
     const productItem = {

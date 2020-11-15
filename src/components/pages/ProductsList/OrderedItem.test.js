@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 import { OrderedItem } from './OrderedItem';
 
 describe('OrderedItem', () => {
-  test('should match snapshot when ordered 1 item', () => {
+  test('should match snapshot and have disabled remove from cart button when ordered 1 item', () => {
     const orderedProductItem = {
       id: 100,
       name: 'Road Bike',
@@ -28,7 +28,7 @@ describe('OrderedItem', () => {
       expect(tree).toMatchSnapshot();
   });
 
-  test('should match snapshot when ordered 2 items', () => {
+  test('should match snapshot and have enabled remove from cart button when ordered 2 items', () => {
     const orderedProductItem = {
       id: 200,
       name: 'Touring',

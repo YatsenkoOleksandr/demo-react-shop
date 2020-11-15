@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OrderedItem should match snapshot when ordered 1 item 1`] = `
+exports[`OrderedItem should match snapshot and have disabled remove from cart button when ordered 1 item 1`] = `
 <div
   className="demo-component"
 >
@@ -106,7 +106,7 @@ exports[`OrderedItem should match snapshot when ordered 1 item 1`] = `
 </div>
 `;
 
-exports[`OrderedItem should match snapshot when ordered 2 items 1`] = `
+exports[`OrderedItem should match snapshot and have enabled remove from cart button when ordered 2 items 1`] = `
 <div
   className="demo-component"
 >
